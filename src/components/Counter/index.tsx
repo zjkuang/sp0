@@ -8,7 +8,20 @@ import {styles} from './style';
 
 export const Counter = () => {
   const {isDarkMode} = useTheme();
-  const [count, setCount] = React.useState(0);
+  // const [count, setCount] = React.useState(0);
+  let count = 0;
+
+  const minusButtonHandler = () => {
+    console.log(`count = ${count} before minus button was pressed`);
+    count -= 1;
+    console.log(`count = ${count} after minus button was pressed`);
+  };
+
+  const plusButtonHandler = () => {
+    console.log(`count = ${count} before plus button was pressed`);
+    count += 1;
+    console.log(`count = ${count} after plus button was pressed`);
+  };
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
@@ -19,14 +32,14 @@ export const Counter = () => {
       <View style={styles.frame}>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => setCount(count - 1)}
+          onPress={minusButtonHandler}
         >
           <Text style={styles.buttonText}>-</Text>
         </TouchableOpacity>
         <Text style={styles.text}>{count}</Text>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => setCount(count + 1)}
+          onPress={plusButtonHandler}
         >
           <Text style={styles.buttonText}>+</Text>
         </TouchableOpacity>
