@@ -15,7 +15,7 @@ export const HelloWorld = () => {
 
   return (
     <View style={[backgroundStyle, styles.centerContentsContainer]}>
-      <Text>Hello, World!</Text>
+      <Text style={styles.text}>Hello, World!</Text>
     </View>
   );
 };

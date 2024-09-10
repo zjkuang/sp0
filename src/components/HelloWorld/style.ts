@@ -7,4 +7,8 @@ export const styles = StyleSheet.create({
     alignItems: 'center', // along the direction perpendicular to flexDirection
     justifyContent: 'center', // along flexDirection
   },
+  text: {
+    fontSize: 36,
+    fontWeight: 'bold',
+  },
 });
