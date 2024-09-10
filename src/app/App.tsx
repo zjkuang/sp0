@@ -3,7 +3,7 @@ import {SafeAreaView, StatusBar} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import {HelloWorld} from '../components/HelloWorld';
+import {Counter} from '../components/Counter';
 import {useTheme} from '../theme';
 import {styles} from './style';
 
@@ -20,7 +20,7 @@ function App(): React.JSX.Element {
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <HelloWorld />
+      <Counter />
     </SafeAreaView>
   );
 }
